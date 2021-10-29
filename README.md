@@ -21,4 +21,4 @@
 2. 从第一章开始，点击对应的文件夹，点开每一个README里的原文链接，仔细阅读
 3. 需要编译的地方就回过头看README文档的其它内容，跟着README文档编译项目内的代码
 4. 如果有不能理解的，或许README里也有解答
-5. 如果README里没有你想要的解答，请提[issue](https://github.com/WangTingZheng/getting_started_with_assembly/issues)， 看到会尽力为你解答
+5. 如果README里没有你想要的解答，请提[issue](https://github.com/WangTingZheng/getting_started_with_assembly/issues/new)， 看到会尽力为你解答
