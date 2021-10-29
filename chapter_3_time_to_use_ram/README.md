@@ -48,15 +48,18 @@ $ gcc -m64 test.o -o test
 $ ./test; echo $?
 ```
 
-## 补充
+## Q&A
 
-首先，进入gdb调试test.asm的时候，最好先run一遍再打断点，否则会出现：
+### Q: 调试出现下面的错误怎么办？
 
 ```bash
 Warning:
 Cannot insert breakpoint 1.
 Cannot access memory at address 0x1135
 ```
+
+A: 跟紧作者的步骤
+
 
 然后那个`set disassembly-flavor intel`命令不是说可以把反汇编的代码修正为intel的格式吗？去掉它与不去掉的区别如下：
 
