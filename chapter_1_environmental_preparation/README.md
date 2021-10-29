@@ -21,18 +21,14 @@ $ which gcc
 /usr/bin/gcc
 ```
 
-## 编译
+## 编译运行
 
 ```bash
 # 64位CPU
-nasm -f elf64 first.asm -o first.o
-gcc -m64 first.o -o first
+$ nasm -f elf64 first.asm -o first.o
+$ gcc -m64 first.o -o first
+$ ./first ; echo $?
+1
 ```
 
-## 运行
-
-```bash
-./first ; echo $?
-```
-
-```echo $?```是指上个命令的退出状态，或函数的返回值。如果去掉它，执行first程序将无任何显示。
+```echo $?```是指上个命令的退出状态，或函数的返回值。如果去掉它，执行first程序将无任何显示。而ret返回的是寄存器eax的值，eax被值1了，所以返回的结果应该是1

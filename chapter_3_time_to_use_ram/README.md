@@ -10,7 +10,7 @@
 - dangteng_try_short.asm: 实现同样的功能，但是是上一个程序的精简版
 - test.asm: 用于gdb调试演示，只是简单地把两个寄存器的值相加
 
-## 编译
+## 编译运行
 
 danteng.asm是一个运行不了的程序，作者首先使用它来做反面教材，其编译指令和之前的一样：
 
@@ -26,29 +26,26 @@ gcc -m64 danteng.o -o danteng
 的错误，[gcc linking error for assembly program - Stack Overflow](https://stackoverflow.com/questions/49828667/gcc-linking-error-for-assembly-program)给出了修正的方法，编译指令如下：
 
 ```bash
-nasm -f elf64 danteng_worked.asm -o danteng_worked.o
-gcc -m64 danteng_worked.o -o danteng_worked -no-pie
+$ nasm -f elf64 danteng_worked.asm -o danteng_worked.o
+$ gcc -m64 danteng_worked.o -o danteng_worked -no-pie
+$ ./danteng_worked; echo $?
 
-nasm -f elf64 danteng_try.asm -o danteng_try.o
-gcc -m64 danteng_try.o -o danteng_try -no-pie
+
+$ nasm -f elf64 danteng_try.asm -o danteng_try.o
+$ gcc -m64 danteng_try.o -o danteng_try -no-pie
+$ ./danteng_try; echo $?
+
+$ nasm -f elf64 danteng_try_short.asm -o danteng_try_short.o
+$ gcc -m64 danteng_try_short.o -o danteng_try_short -no-pie
+$ ./danteng_try_short; echo $?
 ```
 
 最后一个用于gdb调试的test.asm编译和之前的一样
 
 ```bash
-nasm -f elf64 test.asm -o test.o
-gcc -m64 test.o -o test
-```
-
-## 运行
-
-正常执行即可：
-
-```bash
-./danteng; echo $?
-./danteng_worked; echo $?
-./danteng_try; echo $?
-./danteng_try_short; echo $?
+$ nasm -f elf64 test.asm -o test.o
+$ gcc -m64 test.o -o test
+$ ./test; echo $?
 ```
 
 ## 补充

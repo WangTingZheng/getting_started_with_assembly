@@ -8,27 +8,25 @@
 - nmb2.asm: 实现 1 + 2 + 3 + 4 + 5的运算
 - nmb3.asm:  实现 1 + 2 + 3 + 4的运算
 
-## 编译
+## 编译运行
 
 64位CPU
 
 ```bash
- nasm -f elf64 nmb.asm -o nmb.o
- gcc -m64 nmb.o -o nmb
+ $ nasm -f elf64 nmb.asm -o nmb.o
+ $ gcc -m64 nmb.o -o nmb
+ $ ./nmb; echo $?
+ 3
+
+ $ nasm -f elf64 nmb2.asm -o nmb2.o
+ $ gcc -m64 nmb2.o -o nmb2
+ $ ./nmb2; echo $?
+ 15
  
- nasm -f elf64 nmb2.asm -o nmb2.o
- gcc -m64 nmb2.o -o nmb2
- 
- nasm -f elf64 nmb3.asm -o nmb3.o
- gcc -m64 nmb3.o -o nmb3
+ $ nasm -f elf64 nmb3.asm -o nmb3.o
+ $ gcc -m64 nmb3.o -o nmb3
+ $ ./nmb3; echo $?
+ 10
 ```
 
-## 运行
-
-```bash
-./nmb;echo$?
-./nmb2;echo$?
-./nmb3:echo$?
-```
-
-话说作者取的文件名够粗鄙的...
+话说作者取的文件名够粗暴的...
