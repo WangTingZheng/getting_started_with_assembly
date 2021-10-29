@@ -58,10 +58,11 @@ Cannot insert breakpoint 1.
 Cannot access memory at address 0x1135
 ```
 
-A: 跟紧作者的步骤
+***A:*** 跟紧作者的步骤
 
+### Q: set disassembly-flavor intel有什么作用
 
-然后那个`set disassembly-flavor intel`命令不是说可以把反汇编的代码修正为intel的格式吗？去掉它与不去掉的区别如下：
+***A:*** `set disassembly-flavor intel`命令不是说可以把反汇编的代码修正为intel的格式吗？去掉它与不去掉的区别如下：
 
 ```assembly
 ;不使用set disassembly-flavor intel
@@ -80,4 +81,3 @@ A: 跟紧作者的步骤
 ```
 
 看起来格式更加清晰了
-

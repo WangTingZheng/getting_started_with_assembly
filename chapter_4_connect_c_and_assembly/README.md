@@ -33,7 +33,7 @@ $ ./advanced_fix; echo $?
 
 ### Q: 从汇编角度来看，两者是如何实现 2 + 3的？
 
-A: 汇编语言的执行流程：
+***A:*** 汇编语言的执行流程：
 
 ```assembly
 mov eax, 2
@@ -64,7 +64,7 @@ ret
 
 ### Q: dword是啥意思？
 
-A: 修改后可运行的程序中，添加了dword：
+***A:*** 修改后可运行的程序中，添加了dword：
 
 ```assembly
 mov dword [x], 0x2
